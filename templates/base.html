@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" 
+    href="{{ url_for('static', filename='styles/style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <meta charset="UTF-8">
+    <title>Tibia Scheduler</title>
+</head>
+<body>
+    {% block content %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,89 @@
+body {
+    background-color: #252839;
+    display: grid;
+    grid-template:
+    50px 500px 50px /
+    50px 500px 50px; 
+    justify-content: center;
+}
+
+.container {
+    background-color: white;
+    grid-area: 2/2/3/3;
+    border: none;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.date {
+    width: 165px;
+}
+ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    width: 100%;
+}
+
+ul > li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h5 {
+    margin: 15px 0px;
+}
+
+
+/* IOS BUTTON */
+.iosButton {
+    display: none;
+}
+
+.iosButton + label {
+    display: block;    
+    width: 35px;
+    height: 20px;
+    border-radius: 40px;
+    background-color: #c6c6c6;
+    cursor: pointer;
+}
+
+.iosButton + label::before {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    left: 0px;
+    border-radius: 100%;
+    background-color: #7b7b7b;
+    cursor: pointer;
+    content: "";
+    transition: all 0.2s;
+}
+
+.iosButton:checked + label::before {
+    left: 15px;
+    background-color: #2196f3;
+    box-shadow: 0 0 10px #2196f3;
+}
+
+.iosButton:checked + label{
+    background-color: #75d0f9;
+}
+/**/
+
+button[type=submit] {
+    color: white;
+    background-color: #4CAF50;
+    width: 170px;
+    height: 30px;
+    border: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
