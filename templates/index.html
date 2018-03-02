@@ -7,34 +7,42 @@
             <h1>Scheduler</h1>
         </header>
         <section>
-            <form action="/submited.html">
+            <form action="{{ url_for('submit') }}" method="POST">
 
-                <input type="date" class="date">
-
+                <input type="date" class="date" name="date">
                 <ul>
-                        <li>
-                            <h5>Druid</h5>
-                            <input type="radio" id="Druid" class="iosButton" name="vocation">
-                            <label for="Druid" class="iosLabel"></label>
-                        </li>
-                        <li>
-                            <h5>Knight</h5>
-                            <input type="radio" id="Knight" class="iosButton" name="vocation">
-                            <label for="Knight" class="iosLabel"></label>
-                        </li>
-                        <li>
-                            <h5>Paladin</h5>
-                            <input type="radio" id="Paladin" class="iosButton" name="vocation">
-                            <label for="Paladin" class="iosLabel"></label>
-                        </li>
-                        <li>
-                            <h5>Sorcerer</h5>
-                            <input type="radio" id="Sorcerer" class="iosButton" name="vocation">
-                            <label for="Sorcerer" class="iosLabel"></label>
-                        </li>
-                    </ul>
+                    <li>
+                        <h5>Druid</h5>
+                        <input type="radio" id="Druid" value="Druid" class="iosButton" name="vocation">
+                        <label for="Druid" class="iosLabel"></label>
+                    </li>
+                    <li>
+                        <h5>Knight</h5>
+                        <input type="radio" id="Knight" value="Knight" class="iosButton" name="vocation">
+                        <label for="Knight" class="iosLabel"></label>
+                    </li>
+                    <li>
+                        <h5>Paladin</h5>
+                        <input type="radio" id="Paladin" value="Paladin" class="iosButton" name="vocation">
+                        <label for="Paladin" class="iosLabel"></label>
+                    </li>
+                    <li>
+                        <h5>Sorcerer</h5>
+                        <input type="radio" id="Sorcerer" value="Sorcerer" class="iosButton" name="vocation">
+                        <label for="Sorcerer" class="iosLabel"></label>
+                    </li>
+                </ul>
                 <button type="submit">Submit</button>
             </form>
+
+            <div class="server_message">
+                {% if state == 0 %}
+                <span class="success">:)</span>
+                {% elif state == 1 or state == 2     %}
+                <span class="error">:(</span>
+                {% endif %}
+            </div>
+                        
         </section>
     </div>
 

@@ -2,7 +2,7 @@ body {
     background-color: #252839;
     display: grid;
     grid-template:
-    50px 500px 50px /
+    50px 400px 50px /
     50px 500px 50px; 
     justify-content: center;
 }
@@ -23,7 +23,7 @@ body {
 }
 ul {
     padding: 0px;
-    margin: 0px;
+    margin: 10px 0px 0px 0px;
     list-style-type: none;
     width: 100%;
 }
@@ -35,7 +35,7 @@ ul > li {
 }
 
 h5 {
-    margin: 15px 0px;
+    margin: 10px 0px;
 }
 
 
@@ -85,5 +85,21 @@ button[type=submit] {
     border: 0;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 10px;
+}
+
+.server_message {
+    transform: rotate(90deg);
+    position: relative;
+    bottom: -70px;
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
 }
